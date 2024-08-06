@@ -1,0 +1,24 @@
+{
+	"name": "React Portfolio",
+	"image": "node:16-alpine",
+	"features": {
+	  "docker-in-docker": "latest"
+	},
+	"customizations": {
+	  "vscode": {
+		"extensions": [
+		  "dbaeumer.vscode-eslint",
+		  "esbenp.prettier-vscode",
+		  "formulahendry.auto-rename-tag",
+		  "formulahendry.auto-close-tag"
+		]
+	  }
+	},
+	"mounts": [
+	  "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached"
+	],
+	"workspaceFolder": "/workspace",
+	"postCreateCommand": "npm install",
+	"runArgs": ["--init"]
+  }
+  
